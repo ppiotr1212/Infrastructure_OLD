@@ -10,4 +10,4 @@ By selecting different branches you can get the sample code that you should have
 | jenkins_controller | CI/CD 2 | Jenkins controller docker and configuration file  |
 | jenkins_agent      | CI/CD 3 | Jenkins agent docker and configuration file |
 | docker-compose     | CI/CD 4 | Full docker-compose based environment configuration |
-| final              | CI/CD 6 | CASC job definitions |
+| final              | CI/CD 8 | CASC job definitions |
