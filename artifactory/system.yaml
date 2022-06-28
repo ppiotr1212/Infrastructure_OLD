@@ -1,0 +1,4 @@
+#SOURCE: https://www.jfrog.com/confluence/display/JFROG/Artifactory+System+YAML
+configVersion: 1
+access:
+  startUpSkipDefaultAdmin: false
