@@ -65,6 +65,12 @@ credentials:
                 o1epS4clbUspxKat9tbIIRccKa9GWXVDNLih8TslLCBoL/knJc+aqw==
                 -----END RSA PRIVATE KEY-----
           scope: GLOBAL
+# Best practice is to use seed job + dynamic reload instead of direct definition
+jobs:
+  - file: /usr/share/jenkins/ref/jobs/backend.groovy
+  - file: /usr/share/jenkins/ref/jobs/frontend.groovy
+  - file: /usr/share/jenkins/ref/jobs/apps_of_apps.groovy
+
 tool:
   sonarRunnerInstallation:
     installations:
@@ -74,6 +80,14 @@ tool:
           installers:
           - sonarRunnerInstaller:
               id: "4.7.0.2747"
+  terraform:
+      installations:
+      - name: "Terraform"
+        properties:
+        - installSource:
+            installers:
+            - terraformInstaller:
+                id: "20413-linux-amd64"
 
 unclassified:
   location:
