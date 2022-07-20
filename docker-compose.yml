@@ -10,17 +10,17 @@ services:
     volumes:
       - ./artifactory/:/artifactory_extra_conf/
     restart: always
-#    healthcheck:
-#        test: ["CMD", "curl", "-f", "http://localhost:8082/artifactory/api/system/ping"]
-#        start_period: 30s
-#        interval: 5s
-#        timeout: 10s
-#        retries: 30
+    healthcheck:
+        test: ["CMD", "curl", "-f", "http://localhost:8082/artifactory/api/system/ping"]
+        start_period: 30s
+        interval: 5s
+        timeout: 10s
+        retries: 30
 
   jenkins:
- #   depends_on:
- #     artifactory:
- #       condition: service_healthy
+    depends_on:
+      artifactory:
+        condition: service_healthy
     build: jenkins_controller
     container_name: jenkins
     ports:
