@@ -2,7 +2,7 @@ version: '2.4'
 
 services:
   artifactory:
-    image: docker.bintray.io/jfrog/artifactory-jcr:latest
+    image: docker.bintray.io/jfrog/artifactory-jcr:7.39.4
     container_name: artifactory
     ports:
       - "8081:8081"
