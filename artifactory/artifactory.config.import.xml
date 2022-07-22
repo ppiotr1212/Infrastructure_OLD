@@ -3,7 +3,7 @@
 <!--  This file content can be retrieved from the /opt/jfrog/artifactory/var/etc/artifactory/artifactory.config.latest.xml path inside container-->
     <localRepositories>
         <localRepository>
-            <key>docker_registry</key>
+            <key>docker-local</key>
             <type>docker</type>
             <description>Panda docker repository</description>
             <notes></notes>
